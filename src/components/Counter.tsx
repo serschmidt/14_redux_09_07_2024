@@ -9,8 +9,8 @@ const Counter = () => {
   const [newCount, setNewCount] = useState<number | ''>('');
 
   return (
-    <div className="mt-5">
-      <h2>Counter: {count}</h2>
+    <div className="container mt-5">
+      <h2 className=" text-center mb-3">Counter: {count}</h2>
       <div>
         <button 
         onClick={
@@ -39,8 +39,8 @@ const Counter = () => {
           +10
         </button>
 
-        <div>
-          <button
+        <div className="input-group mb-3">
+          <button className="btn btn-outline-danger"
             onClick={() => {
               if (newCount) {
                 // dispatch({ type: "counter/changeX", payload: -newCount });
@@ -51,7 +51,7 @@ const Counter = () => {
           >
             -X
           </button>
-          <input
+          <input className="form-control"
             type="number"
             value={newCount}
             onChange={(e) => {
